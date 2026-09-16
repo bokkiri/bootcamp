@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>AI 부트캠프 교사 모집 포스터</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#222222;--body:#3F3F3F;--muted:#6A6A6A;--hairline:#DDDDDD;--hairline-soft:#EBEBEB;
+  --surface:#F7F7F7;--rausch:#FF385C;--rausch-active:#E00B41;--rausch-tint:#FFF0F3;
+  --sans:"Inter","Noto Sans KR",-apple-system,system-ui,sans-serif;
+}
+html,body{background:#fff}
+body{font-family:var(--sans);color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;
+  font-feature-settings:"cv02","cv03","cv04"}
+.page{width:210mm;height:297mm;padding:16mm 16mm 13mm;display:flex;flex-direction:column}
+.tnum{font-variant-numeric:tabular-nums}
+
+.eyebrow{font-size:9.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rausch)}
+.title{font-size:40pt;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:4mm 0 3mm}
+.title .r{color:var(--rausch)}
+.hook{font-size:12.5pt;color:var(--body);font-weight:500;line-height:1.5;max-width:150mm}
+.hook b{color:var(--ink);font-weight:700}
+
+.keyrow{display:flex;gap:8px;margin:7mm 0 6mm}
+.key{flex:1;border:1px solid var(--hairline);border-radius:12px;padding:10px 13px}
+.key .k{font-size:8pt;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.key .v{font-weight:700;font-size:11.5pt;margin-top:3px;line-height:1.2;letter-spacing:-.01em}
+.key .v small{font-weight:500;color:var(--muted);font-size:8.4pt}
+
+h2.sec{font-size:14pt;font-weight:800;letter-spacing:-.02em;margin:0 0 3.5mm}
+
+.builds{display:flex;gap:9px;margin-bottom:4mm}
+.build{flex:1;border:1px solid var(--hairline-soft);border-radius:12px;overflow:hidden}
+.build .cap{height:12mm;display:flex;align-items:center;justify-content:center;font-size:17pt;position:relative}
+.build:nth-child(1) .cap{background:#FFF0F3}
+.build:nth-child(2) .cap{background:#F0F7F5}
+.build:nth-child(3) .cap{background:#F2F1F8}
+.build .tg{position:absolute;top:5px;left:6px;width:16px;height:16px;border-radius:50%;background:#fff;
+  color:var(--ink);font-weight:800;font-size:8pt;display:grid;place-items:center}
+.build .bd{padding:8px 11px 10px}
+.build .r{font-size:8.6pt;font-weight:700;color:var(--rausch);margin-bottom:1px}
+.build .h{font-size:10.5pt;font-weight:700;margin-bottom:2px;letter-spacing:-.01em}
+.build p{font-size:8.4pt;color:var(--muted);font-weight:500;line-height:1.4}
+
+.callout{display:flex;gap:10px;align-items:center;background:var(--rausch-tint);border:1px solid #FFD9E0;
+  border-radius:12px;padding:9px 14px;margin-bottom:6mm}
+.callout .ic{font-size:15pt;flex:none}
+.callout .t{font-size:10.5pt;font-weight:700;color:var(--ink);line-height:1.4}
+.callout .t b{color:var(--rausch-active);font-weight:800}
+.callout .t small{font-weight:500;color:var(--body);font-size:8.6pt}
+
+.benefits{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px 16px;margin-bottom:6mm}
+.b{display:flex;gap:9px;align-items:flex-start;padding:5px 0}
+.b .i{font-size:13pt;line-height:1}
+.b b{font-size:9.6pt;font-weight:700;display:block;letter-spacing:-.01em}
+.b span{font-size:8.2pt;color:var(--muted);font-weight:500;line-height:1.35}
+
+.prep{margin-bottom:auto}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{border:1px solid var(--hairline);border-radius:999px;padding:6px 14px;font-size:9pt;font-weight:600}
+.chip.lead{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.apply{margin-top:7mm;background:var(--surface);border:1px solid var(--hairline-soft);border-radius:16px;
+  padding:7mm 8mm;display:flex;gap:8mm;align-items:center}
+.apply .txt{flex:1}
+.apply .lbl{font-weight:700;font-size:9pt;letter-spacing:.12em;text-transform:uppercase;color:var(--rausch)}
+.apply .big{font-size:20pt;font-weight:800;letter-spacing:-.02em;margin:2mm 0 3mm;line-height:1.15}
+.apply .big em{color:var(--rausch);font-style:normal}
+.apply .u{font-size:9pt;color:var(--muted);font-weight:500;word-break:break-all;line-height:1.4}
+.apply .u b{color:var(--ink);font-weight:600}
+.apply .contact{margin-top:3mm;font-size:9.6pt;color:var(--ink);font-weight:600}
+.qr{background:#fff;border:1px solid var(--hairline);border-radius:12px;padding:8px;width:33mm;height:33mm;flex:none;display:grid;place-items:center}
+.qr img{width:100%;height:100%;image-rendering:pixelated}
+.qr-cap{text-align:center;font-size:7.6pt;color:var(--muted);font-weight:600;margin-top:4px}
+
+.footline{margin-top:5mm;text-align:center;font-size:8pt;color:var(--muted);font-weight:500}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">천안제일고 · 2026 교사 융합 프로젝트 연수</div>
+  <h1 class="title">AI 부트캠프 &amp; <span class="r">해커톤</span></h1>
+  <p class="hook">코딩 몰라도 괜찮아요. AI로 코딩하는 <b>‘바이브코딩’</b>으로,<br>우리 학교에서 <b>바로 쓸 AI 도구</b>를 팀으로 만들어봅니다.</p>
+
+  <div class="keyrow">
+    <div class="key"><div class="k">일정</div><div class="v tnum">10.16(금)~17(토)<br><small>16:00 ~ 13:00 · 1박 2일</small></div></div>
+    <div class="key"><div class="k">장소</div><div class="v">천안 인근 펜션<br><small>세미나실 구비</small></div></div>
+    <div class="key"><div class="k">대상</div><div class="v">희망 교사 10명<br><small>3개 조 · 초보 환영</small></div></div>
+  </div>
+
+  <h2 class="sec">1박 2일, 팀으로 ‘작동하는 AI 도구’를 만듭니다</h2>
+  <div class="builds">
+    <div class="build"><div class="cap">🤖<span class="tg">A</span></div><div class="bd"><div class="r">우리학교 AI 챗봇</div><div class="h">학교 비서 챗봇</div><p>학사일정·급식·학칙·행정 FAQ를 대신 답하는 교내 챗봇.</p></div></div>
+    <div class="build"><div class="cap">📝<span class="tg">B</span></div><div class="bd"><div class="r">AI 채점 도우미</div><div class="h">채점 지옥 탈출</div><p>서술형 답안에 점수·피드백 초안 자동 생성, 교사는 검토만.</p></div></div>
+    <div class="build"><div class="cap">✨<span class="tg">C</span></div><div class="bd"><div class="r">인터랙티브 학습앱</div><div class="h">살아있는 교과서</div><p>개념을 보여주는 미니 웹앱 + 질문에 답하는 AI 튜터.</p></div></div>
+  </div>
+  <div class="callout"><span class="ic">💡</span><div class="t">이 3가지는 <b>예시일 뿐!</b> 주제는 우리 팀이 자유롭게 정합니다. <small>내 교과·우리 학교 상황에 딱 맞는 아이디어로 (3~4명 1조 · 부트캠프+해커톤)</small></div></div>
+
+  <h2 class="sec">왜 참가하나요?</h2>
+  <div class="benefits">
+    <div class="b"><span class="i">💻</span><div><b>코딩 몰라도 OK</b><span>바이브코딩, 경험 무관</span></div></div>
+    <div class="b"><span class="i">🎁</span><div><b>진짜 결과물 소유</b><span>바로 쓸 AI 도구 완성</span></div></div>
+    <div class="b"><span class="i">🏨</span><div><b>숙식·간식 제공</b><span>1박 2일 전액 지원</span></div></div>
+    <div class="b"><span class="i">🧑‍🏫</span><div><b>ADE 전문강사</b><span>처음부터 끝까지 지원</span></div></div>
+    <div class="b"><span class="i">🤝</span><div><b>몰입 협업</b><span>동료와 1박 2일 완주</span></div></div>
+    <div class="b"><span class="i">🚀</span><div><b>최신 AI 코딩</b><span>Claude·Codex 실전</span></div></div>
+  </div>
+
+  <div class="prep">
+    <h2 class="sec">준비물</h2>
+    <div class="chips">
+      <span class="chip lead">💻 개인 노트북 (필수)</span>
+      <span class="chip">🔌 충전기</span>
+      <span class="chip">🪥 세면도구</span>
+      <span class="chip">💊 상비약</span>
+      <span class="chip">👕 편한 옷·잠옷</span>
+    </div>
+  </div>
+
+  <div class="apply">
+    <div class="txt">
+      <div class="lbl">지금 신청하세요</div>
+      <div class="big">신청 마감 <em class="tnum">9.23(수) 17:00</em></div>
+      <div class="u">📱 QR 스캔 또는 링크 접속 →<br><b>__URL__</b></div>
+      <div class="contact">문의 · 담당 &nbsp;최훈석 선생님</div>
+    </div>
+    <div>
+      <div class="qr"><img src="__QR_SRC__" alt="신청 QR 코드"></div>
+      <div class="qr-cap">스캔하면 신청</div>
+    </div>
+  </div>
+
+  <div class="footline">2026학년도 AI 교사 융합 프로젝트 연수 · 천안제일고등학교</div>
+</div>
+</body>
+</html>
