@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 부트캠프 기초반 안내서</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Nanum+Myeongjo:wght@400;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#F2ECE0; --ink:#1F1D1A; --soft:#4A4640; --line:#1F1D1A;
+  --blue:#2B4AA0; --red:#E5483B; --yellow:#FFD84A;
+  --sans:"IBM Plex Sans KR",system-ui,sans-serif;
+  --serif:"Nanum Myeongjo",serif;
+  --display:"Black Han Sans","IBM Plex Sans KR",sans-serif;
+  --hand:"Nanum Pen Script",cursive;
+}
+html,body{background:#d9d4ca}
+body{font-family:var(--sans);color:var(--ink);word-break:keep-all;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;margin:0 auto;background:var(--paper);position:relative;overflow:hidden;
+  padding:13mm 15mm 12mm;display:flex;flex-direction:column;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+.page:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:radial-gradient(rgba(31,29,26,.10) .5px,transparent .6px);background-size:3px 3px}
+@media screen{body{padding:8mm 0}.page{box-shadow:0 2mm 8mm rgba(0,0,0,.15);margin-bottom:8mm}}
+
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1.6pt solid var(--line);padding-bottom:2.4mm}
+.mast .name{font-family:var(--display);font-size:15pt;letter-spacing:-.01em}
+.mast .name em{font-style:normal;color:var(--red)}
+.mast .issue{font-size:8.4pt;font-weight:600;text-align:right;line-height:1.45}
+.sub{display:flex;justify-content:space-between;font-size:7.8pt;font-weight:600;color:var(--soft);
+  border-bottom:.6pt solid var(--line);padding:1.4mm 0}
+
+h1{font-family:var(--display);font-weight:400;font-size:34pt;line-height:1.12;letter-spacing:-.02em;margin-top:8mm}
+h1 .b{color:var(--blue)}
+h1 .mark{background:linear-gradient(transparent 62%,var(--yellow) 62%,var(--yellow) 94%,transparent 94%)}
+
+.cols{display:grid;grid-template-columns:1.12fr 1fr;gap:9mm;margin-top:7mm;flex:1}
+.letter{font-family:var(--serif);font-size:10.2pt;line-height:1.95;color:#2c2925}
+.letter p+p{margin-top:3mm}
+.letter .hi{font-weight:700;color:var(--ink)}
+.sign{font-family:var(--hand);font-size:22pt;color:var(--blue);margin-top:3mm;text-align:right;line-height:1}
+.sign small{display:block;font-family:var(--sans);font-size:7.8pt;color:var(--soft);margin-top:1.2mm}
+
+h2{font-size:12.4pt;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:2mm}
+h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inline-block}
+.sec+.sec{margin-top:7mm}
+
+.checks{list-style:none;margin-top:3mm}
+.checks li{display:flex;gap:2.6mm;font-size:9.8pt;line-height:1.5;padding:1.8mm 0;border-bottom:.6pt dashed rgba(31,29,26,.45)}
+.checks li:before{content:"";flex:none;width:3.8mm;height:3.8mm;border:1.2pt solid var(--ink);margin-top:.7mm;
+  background:linear-gradient(135deg,transparent 45%,var(--blue) 45%,var(--blue) 58%,transparent 58%)}
+.note{font-family:var(--hand);font-size:17pt;color:var(--red);transform:rotate(-2.5deg);margin-top:3mm;line-height:1.1}
+
+.made{margin-top:3mm;border:1.4pt solid var(--line);padding:3.4mm 4mm;background:rgba(255,255,255,.35)}
+.made .row{display:flex;align-items:baseline;gap:3mm}
+.made .num{font-family:var(--display);font-size:30pt;color:var(--blue);line-height:1}
+.made .num small{font-family:var(--sans);font-size:9pt;font-weight:700;color:var(--ink);margin-left:.6mm}
+.made p{font-size:9pt;line-height:1.6;color:var(--soft);margin-top:1.6mm}
+
+/* timeline */
+.tl{list-style:none;margin-top:3.4mm;position:relative}
+.tl li{display:grid;grid-template-columns:15mm 1fr;gap:3mm;font-size:9.5pt;line-height:1.45;padding:1.25mm 0}
+.tl .t{font-weight:700;font-variant-numeric:tabular-nums}
+.tl .day{font-family:var(--display);font-size:11pt;color:var(--red);padding-top:2.4mm;grid-template-columns:1fr}
+.tl .key{font-weight:700}
+.tl .key:after{content:"";display:block;height:2.2mm;margin-top:-2.4mm;background:var(--yellow);opacity:.8;position:relative;z-index:-1}
+.small{font-size:8pt;color:var(--soft);margin-top:2mm;line-height:1.5}
+
+.foot{margin-top:auto;padding-top:3mm;border-top:.6pt solid var(--line);display:flex;justify-content:space-between;font-size:7.6pt;color:var(--soft)}
+
+/* page 2 */
+.info{width:100%;border-collapse:collapse;margin-top:3.4mm;font-size:9.6pt}
+.info th,.info td{border-top:.8pt solid var(--line);padding:2.3mm 0;text-align:left;vertical-align:top;line-height:1.5}
+.info tr:last-child th,.info tr:last-child td{border-bottom:.8pt solid var(--line)}
+.info th{width:24mm;font-weight:700;color:var(--red);font-size:8.6pt;letter-spacing:.04em;padding-top:2.6mm}
+.info td b{font-weight:700}
+.info td span{color:var(--soft)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9mm;margin-top:7mm}
+.grid2 .sec{margin-top:0}
+.bring{list-style:none;margin-top:3mm;columns:1}
+.bring li{font-size:9.6pt;padding:1.5mm 0;border-bottom:.6pt dashed rgba(31,29,26,.45);display:flex;justify-content:space-between}
+.bring li span{color:var(--soft);font-size:8.4pt}
+
+.faq{margin-top:3mm}
+.faq dt{font-size:9.8pt;font-weight:700;margin-top:3mm;display:flex;gap:2mm}
+.faq dt:before{content:"Q";font-family:var(--display);color:var(--blue);font-weight:400}
+.faq dd{font-size:9.2pt;line-height:1.65;color:var(--soft);margin-top:.8mm;padding-left:5.4mm}
+
+.apply{margin-top:auto;border:1.6pt solid var(--line);background:var(--ink);color:var(--paper);
+  display:grid;grid-template-columns:1fr 44mm;gap:7mm;padding:6mm 7mm;align-items:center;position:relative}
+.apply .hand{font-family:var(--hand);font-size:22pt;color:var(--yellow);line-height:1}
+.apply h2{font-family:var(--display);font-weight:400;font-size:28pt;margin-top:1mm;color:var(--paper)}
+.apply h2:before{display:none}
+.apply ol{list-style:none;counter-reset:s;margin-top:3mm}
+.apply ol li{counter-increment:s;font-size:9.6pt;line-height:1.5;padding:.8mm 0;display:flex;gap:2.4mm}
+.apply ol li:before{content:counter(s);font-family:var(--display);color:var(--yellow);width:4mm}
+.apply .meta{margin-top:3mm;font-size:9.4pt;line-height:1.8;border-top:.6pt solid rgba(242,236,224,.4);padding-top:2.4mm}
+.apply .meta b{display:inline-block;width:11mm;color:var(--yellow);font-weight:700}
+.apply .url{color:var(--paper);font-weight:700;text-decoration:underline;text-underline-offset:2px;word-break:break-all}
+.apply .is-empty{color:#ff8a7f!important}
+.qr{width:44mm;height:44mm;background:#fff;padding:1.6mm;display:flex;align-items:center;justify-content:center}
+.qr svg{width:100%;height:100%;display:block}
+.qr.is-empty{background:repeating-linear-gradient(45deg,#fff 0 2mm,#ece7dd 2mm 4mm);color:var(--red);text-align:center;font-weight:700;font-size:10.5pt;line-height:1.35}
+.qr.is-empty small{font-size:7pt;font-weight:500;color:var(--soft)}
+</style>
+</head>
+<body>
+
+<!-- 1쪽 -->
+<div class="page">
+  <div class="mast">
+    <div class="name">AI 부트캠프 <em>기초반</em> 안내</div>
+    <div class="issue">2026. 11.<br>천안제일고 교사 연수</div>
+  </div>
+  <div class="sub"><span>2차 AI 부트캠프 · 기초반 / 심화반 동시 운영</span><span>12.11(금) — 12.12(토) · 아산 지올리브펜션</span></div>
+
+  <h1>코딩 몰라도,<br><span class="b">1박 2일</span>이면 <span class="mark">내 앱 하나.</span></h1>
+
+  <div class="cols">
+    <div>
+      <div class="letter">
+        <p>선생님, 안녕하세요.</p>
+        <p>지난 10월, 열두 분의 선생님과 1박 2일 AI 부트캠프를 다녀왔습니다. 코딩을 처음 해 보는 분도 많았는데,
+          둘째 날 아침에는 <span class="hi">여섯 팀이 각자 만든 도구를 들고 발표</span>를 했습니다.</p>
+        <p>이번 12월에는 1차에 함께한 선생님들이 심화반으로 한 걸음 더 나아가고,
+          처음 시작하시는 선생님들을 위해 <span class="hi">기초반</span>을 새로 엽니다.
+          기초반은 전담 강사님이 처음부터 끝까지 곁에서 도와주십니다.</p>
+        <p>‘나도 할 수 있을까’ 싶은 분께 꼭 맞는 자리입니다. 노트북 한 대만 들고 가볍게 오세요.</p>
+      </div>
+      <div class="sign">최훈석 드림<small>2차 AI 부트캠프 운영</small></div>
+
+      <div class="sec" style="margin-top:6mm">
+        <h2>지난 1차는 이랬어요</h2>
+        <div class="made">
+          <div class="row"><span class="num">12<small>명</small></span><span class="num">6<small>개 팀</small></span><span class="num">1<small>박 2일</small></span></div>
+          <p>2명씩 짝을 지어 하나의 앱을 나눠 만들고, 토요일 아침 각 팀이 직접 시연했습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec">
+        <h2>이런 선생님께 권해요</h2>
+        <ul class="checks">
+          <li>AI로 뭔가 만든다는 얘기는 들었지만, 직접 해 본 적은 없다</li>
+          <li>수업이나 업무에 쓰고 싶은 도구가 머릿속에 하나쯤 있다</li>
+          <li>코딩은 나와 상관없는 일이라고 생각해 왔다</li>
+          <li>동료 선생님들과 하룻밤 푹 빠져 뭔가 만들어 보고 싶다</li>
+        </ul>
+        <div class="note">하나라도 해당되면, 기초반이 딱이에요!</div>
+      </div>
+
+      <div class="sec">
+        <h2>1박 2일, 이렇게 보냅니다</h2>
+        <ul class="tl">
+          <li class="day">12.11 금요일</li>
+          <li><span class="t">16:00</span><span>펜션 도착, 짐 풀기</span></li>
+          <li><span class="t">16:30</span><span>저녁 식사</span></li>
+          <li><span class="t">17:30</span><span>오리엔테이션</span></li>
+          <li><span class="t">18:00</span><span class="key">바이브코딩 맛보기 — 첫 미니앱 만들기</span></li>
+          <li><span class="t">19:30</span><span class="key">만들 것 정하고 본격 개발</span></li>
+          <li><span class="t">21:00</span><span>야식</span></li>
+          <li><span class="t">~24:00</span><span>자유롭게 더 만들기</span></li>
+          <li class="day">12.12 토요일</li>
+          <li><span class="t">07:30</span><span>아침 식사</span></li>
+          <li><span class="t">08:30</span><span>마무리, 발표 준비</span></li>
+          <li><span class="t">09:00</span><span class="key">발표 — 내가 만든 도구 시연</span></li>
+          <li><span class="t">10:00</span><span>해산</span></li>
+        </ul>
+        <p class="small">세부 시간은 강사님과 조율하며 조금 바뀔 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>AI 부트캠프 기초반 안내서</span><span>1 / 2</span></div>
+</div>
+
+<!-- 2쪽 -->
+<div class="page">
+  <div class="mast">
+    <div class="name">AI 부트캠프 <em>기초반</em> 안내</div>
+    <div class="issue">모집 개요 · 준비물 · 신청</div>
+  </div>
+
+  <div class="sec" style="margin-top:7mm">
+    <h2>모집 개요</h2>
+    <table class="info">
+      <tr><th>과정</th><td><b>2차 AI 부트캠프 기초반</b> <span>— 바이브코딩 입문부터 내 도구 완성까지</span></td></tr>
+      <tr><th>일정</th><td><b>2026. 12. 11.(금) 16:00 ~ 12. 12.(토) 10:00</b> <span>(1박 2일)</span></td></tr>
+      <tr><th>장소</th><td><b>지올리브펜션</b> <span>— 충남 아산시 영인면 · 강의와 발표는 세미나실</span></td></tr>
+      <tr><th>모집 인원</th><td><b>8~9명</b> <span>— 교과·경력 상관없이, 코딩 경험이 없어도 됩니다</span></td></tr>
+      <tr><th>강사</th><td><b>기초반 전담 강사</b> <span>— 처음부터 끝까지 함께합니다</span></td></tr>
+      <tr><th>제공</th><td><b>숙박, 저녁·야식·아침 식사</b></td></tr>
+      <tr><th>결과물</th><td><b>내 수업·업무에 쓸 작은 웹 도구 1개</b> <span>— 주제는 직접 정합니다</span></td></tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="sec">
+      <h2>챙겨 오실 것</h2>
+      <ul class="bring">
+        <li>개인 노트북 <span>필수 · 윈도·맥 모두 가능</span></li>
+        <li>노트북 충전기 <span>필수</span></li>
+        <li>만들고 싶은 것 한 줄 메모 <span>없어도 괜찮아요</span></li>
+        <li>세면도구, 상비약 <span>개인</span></li>
+        <li>편한 옷 · 잠옷 <span>개인</span></li>
+      </ul>
+      <p class="small">와이파이와 멀티탭은 현장에 준비해 둡니다.</p>
+    </div>
+
+    <div class="sec">
+      <h2>자주 묻는 질문</h2>
+      <dl class="faq">
+        <dt>코딩을 정말 하나도 몰라도 되나요?</dt>
+        <dd>네. 코드는 AI가 씁니다. 선생님은 ‘무엇을 만들고 싶은지’를 말로 설명하시면 됩니다.</dd>
+        <dt>어떤 걸 만들게 되나요?</dt>
+        <dd>수업용 퀴즈나 타이머, 학급 업무 정리 도구처럼 작은 웹 도구 하나가 목표입니다.</dd>
+        <dt>심화반과는 무엇이 다른가요?</dt>
+        <dd>심화반은 1차 참여 선생님 대상의 응용 과정입니다. 기초반은 입문부터 시작하며, 같은 날 같은 장소에서 진행합니다.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="apply">
+    <div>
+      <div class="hand">휴대폰 카메라로 찍으면 바로 열려요</div>
+      <h2>신청은 QR로</h2>
+      <ol>
+        <li>오른쪽 QR을 찍거나 아래 링크를 엽니다.</li>
+        <li>구글 설문에 이름과 교과를 적어 제출합니다.</li>
+        <li>참가 확정은 개별로 안내해 드립니다.</li>
+      </ol>
+      <div class="meta">
+        <div><b>링크</b><a class="url" data-apply-url></a></div>
+        <div><b>마감</b><span data-deadline></span></div>
+        <div><b>문의</b><span data-contact></span> 선생님</div>
+      </div>
+    </div>
+    <div class="qr" data-apply-qr="#1F1D1A"></div>
+  </div>
+
+  <div class="foot"><span>AI 부트캠프 기초반 안내서</span><span>2 / 2</span></div>
+</div>
+
+<script src="vendor/qrcode.js"></script>
+<script src="config.js"></script>
+<script src="apply.js"></script>
+</body>
+</html>

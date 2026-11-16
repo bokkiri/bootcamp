@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 부트캠프 기초반 포스터</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#F2ECE0; --ink:#1F1D1A; --soft:#4A4640; --line:#1F1D1A;
+  --blue:#2B4AA0; --red:#E5483B; --yellow:#FFD84A;
+  --sans:"IBM Plex Sans KR",system-ui,sans-serif;
+  --display:"Black Han Sans","IBM Plex Sans KR",sans-serif;
+  --hand:"Nanum Pen Script",cursive;
+}
+html,body{background:#d9d4ca}
+body{font-family:var(--sans);color:var(--ink);word-break:keep-all;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{
+  width:210mm;height:297mm;margin:0 auto;background:var(--paper);position:relative;overflow:hidden;
+  padding:13mm 14mm 12mm;display:flex;flex-direction:column;
+}
+/* 종이 결 */
+.page:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:radial-gradient(rgba(31,29,26,.10) .5px,transparent .6px);
+  background-size:3px 3px;
+}
+/* 리소 망점 원 */
+.dots{
+  position:absolute;right:-34mm;top:30mm;width:132mm;height:132mm;border-radius:50%;
+  background-image:radial-gradient(var(--blue) 34%,transparent 36%);
+  background-size:2.6mm 2.6mm;opacity:.22;mix-blend-mode:multiply;
+}
+.top{display:flex;justify-content:space-between;align-items:baseline;
+  font-size:8.6pt;font-weight:600;letter-spacing:.02em;border-bottom:1.6pt solid var(--line);padding-bottom:2.2mm;position:relative}
+.top b{font-weight:700}
+
+.hero{position:relative;margin-top:8mm}
+.kicker{font-family:var(--hand);font-size:30pt;color:var(--red);transform:rotate(-4deg);
+  display:inline-block;margin-left:2mm;line-height:1}
+.big{
+  font-family:var(--display);font-size:118pt;line-height:.92;letter-spacing:-.02em;color:var(--blue);
+  margin-top:1mm;position:relative;display:inline-block;white-space:nowrap;
+}
+.big .shadow{position:absolute;left:2.2mm;top:1.6mm;color:var(--red);mix-blend-mode:multiply;z-index:0}
+.big .face{position:relative;z-index:1}
+.side{
+  position:absolute;right:0;top:12mm;text-align:right;font-weight:700;font-size:10pt;line-height:1.5;
+}
+.side .tag{display:inline-block;border:1.4pt solid var(--ink);padding:1mm 2.6mm;font-size:9pt;margin-bottom:2mm}
+.sticker{
+  position:absolute;right:6mm;top:44mm;width:34mm;height:34mm;border-radius:50%;background:var(--yellow);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(9deg);
+  font-weight:700;font-size:9pt;line-height:1.25;text-align:center;box-shadow:1.2mm 1.2mm 0 var(--ink);
+  border:1.4pt solid var(--ink)
+}
+.sticker b{font-family:var(--display);font-weight:400;font-size:22pt;line-height:1.05}
+
+.lead{font-size:20pt;font-weight:700;letter-spacing:-.03em;line-height:1.3;margin-top:6mm;max-width:150mm}
+.lead u{text-decoration:none;background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%)}
+.body{font-size:10.6pt;line-height:1.7;color:var(--soft);margin-top:3.5mm;max-width:128mm}
+
+.facts{display:grid;grid-template-columns:1.25fr 1fr;border:1.6pt solid var(--line);margin-top:7mm;background:var(--paper);position:relative}
+.fact{padding:3.2mm 4mm;border-right:1pt solid var(--line);border-bottom:1pt solid var(--line)}
+.fact:nth-child(2n){border-right:none}
+.fact:nth-last-child(-n+2){border-bottom:none}
+.fact .k{font-size:7.8pt;font-weight:700;letter-spacing:.08em;color:var(--red)}
+.fact .v{font-size:13pt;font-weight:700;letter-spacing:-.02em;margin-top:.8mm;line-height:1.3}
+.fact .v small{display:block;font-size:8.6pt;font-weight:500;color:var(--soft);letter-spacing:0;margin-top:.4mm}
+.arrow{font-family:var(--sans);font-weight:500;color:var(--soft);margin:0 1mm}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:7mm}
+.step{border-top:1.6pt solid var(--line);padding-top:2.4mm}
+.step .n{font-family:var(--display);font-size:26pt;color:var(--red);line-height:1}
+.step .when{font-size:8pt;font-weight:700;letter-spacing:.04em;margin-top:1mm}
+.step h3{font-size:12pt;font-weight:700;letter-spacing:-.02em;margin-top:1mm}
+.step p{font-size:8.9pt;line-height:1.55;color:var(--soft);margin-top:1mm}
+
+.stub{
+  margin-top:auto;position:relative;border-top:1.4pt dashed var(--ink);padding-top:5mm;
+  display:grid;grid-template-columns:1fr 38mm;gap:6mm;align-items:center
+}
+.stub .cut{position:absolute;top:-3.4mm;left:3mm;background:var(--paper);padding:0 1.5mm;font-size:10pt}
+.stub .label{font-family:var(--hand);font-size:24pt;color:var(--blue);line-height:1}
+.stub h2{font-family:var(--display);font-weight:400;font-size:26pt;letter-spacing:-.01em;margin-top:1mm;line-height:1.05}
+.stub .meta{font-size:9.6pt;line-height:1.75;margin-top:2.4mm}
+.stub .meta b{display:inline-block;width:12mm;font-weight:700}
+.stub .url{font-weight:700;color:var(--blue);word-break:break-all;text-decoration:none}
+.is-empty{color:var(--red)!important}
+.qr{width:38mm;height:38mm;background:#fff;border:1.4pt solid var(--ink);padding:1.4mm;display:flex;align-items:center;justify-content:center}
+.qr svg{width:100%;height:100%;display:block}
+.qr.is-empty{background:repeating-linear-gradient(45deg,#fff 0 2mm,#f4f1ea 2mm 4mm);text-align:center;
+  font-weight:700;font-size:10pt;line-height:1.35}
+.qr.is-empty small{font-size:7pt;font-weight:500;color:var(--soft)}
+
+.foot{margin-top:4mm;font-size:7.8pt;line-height:1.6;color:var(--soft);display:flex;justify-content:space-between;gap:6mm}
+@media screen{body{padding:8mm 0}.page{box-shadow:0 2mm 8mm rgba(0,0,0,.15)}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="dots" aria-hidden="true"></div>
+
+  <div class="top"><span><b>천안제일고</b> 교사 연수 · 2026 겨울</span><span>2차 AI 부트캠프 <b>기초반 모집</b></span></div>
+
+  <section class="hero">
+    <div class="kicker">코딩, 처음이세요?</div><br>
+    <div class="big" aria-label="기초반"><span class="shadow" aria-hidden="true">기초반</span><span class="face">기초반</span></div>
+    <div class="side"><span class="tag">AI 부트캠프</span><br>1박 2일<br>12.11 — 12.12</div>
+    <div class="sticker"><span>모집</span><b>8~9명</b><span>교과 무관</span></div>
+
+    <p class="lead">하고 싶은 걸 말로 설명하면,<br><u>코드는 AI가 씁니다.</u></p>
+    <p class="body">버튼 하나 만들 줄 몰라도 괜찮습니다. 수업 시간에 쓰고 싶었던 퀴즈, 매번 손으로 하던 집계표처럼
+      ‘이런 거 하나 있으면 좋겠다’ 싶던 것을 1박 2일 동안 직접 만들어 봅니다. 기초반 전담 강사님이 처음부터 끝까지 옆에서 도와드립니다.</p>
+  </section>
+
+  <div class="facts">
+    <div class="fact"><div class="k">언제</div><div class="v">12.11 금 16:00<span class="arrow">→</span>12.12 토 10:00<small>1박 2일</small></div></div>
+    <div class="fact"><div class="k">어디서</div><div class="v">지올리브펜션<small>아산시 영인면 · 세미나실</small></div></div>
+    <div class="fact"><div class="k">누가</div><div class="v">코딩 처음인 선생님<small>교과·경력 상관없이 누구나</small></div></div>
+    <div class="fact"><div class="k">준비물</div><div class="v">노트북 한 대<small>숙박·식사·야식은 준비해 둡니다</small></div></div>
+  </div>
+
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div class="when">금요일 저녁</div><h3>말로 코딩해 보기</h3>
+      <p>AI에게 말로 시켜서 30분 만에 나만의 첫 미니앱을 만듭니다.</p></div>
+    <div class="step"><div class="n">2</div><div class="when">금요일 밤</div><h3>내 도구 만들기</h3>
+      <p>수업이나 업무에 쓸 도구를 정하고, 강사님과 함께 완성합니다.</p></div>
+    <div class="step"><div class="n">3</div><div class="when">토요일 아침</div><h3>보여주기</h3>
+      <p>만든 것을 동료 선생님들 앞에서 직접 시연합니다.</p></div>
+  </div>
+
+  <div class="stub">
+    <span class="cut" aria-hidden="true">✂</span>
+    <div>
+      <div class="label">휴대폰 카메라로 찍으면 끝</div>
+      <h2>신청은 QR로</h2>
+      <div class="meta">
+        <div><b>링크</b><a class="url" data-apply-url></a></div>
+        <div><b>마감</b><span data-deadline></span></div>
+        <div><b>문의</b><span data-contact></span> 선생님</div>
+      </div>
+    </div>
+    <div class="qr" data-apply-qr="#1F1D1A"></div>
+  </div>
+
+  <div class="foot">
+    <span>지난 10월 1차 부트캠프에는 선생님 12명이 참여해, 6개 팀이 1박 2일 동안 만든 도구를 직접 발표했습니다.</span>
+    <span>1차 참여 선생님은 같은 날 심화반으로 함께합니다.</span>
+  </div>
+</div>
+<script src="vendor/qrcode.js"></script>
+<script src="config.js"></script>
+<script src="apply.js"></script>
+</body>
+</html>
