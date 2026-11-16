@@ -3,6 +3,6 @@
 // 포스터(poster.html)와 안내서(guide.html)의 QR·링크·마감일이 함께 바뀝니다.
 window.BOOTCAMP = {
   applyUrl: "https://forms.gle/h6JCbVQXYRuE4ym99",  // 1차 신청 구글폼 재사용
-  deadline: "",          // 예: "12월 4일(금) 17:00"
+  deadline: "11월 20일(금) 18:00",
   contact: "최훈석"
 };
