@@ -34,11 +34,11 @@ body{font-family:var(--sans);color:var(--ink);word-break:keep-all;-webkit-print-
 .sub{display:flex;justify-content:space-between;font-size:7.8pt;font-weight:600;color:var(--soft);
   border-bottom:.6pt solid var(--line);padding:1.4mm 0}
 
-h1{font-family:var(--display);font-weight:400;font-size:34pt;line-height:1.12;letter-spacing:-.02em;margin-top:8mm}
+h1{font-family:var(--display);font-weight:400;font-size:32pt;line-height:1.12;letter-spacing:-.02em;margin-top:6mm}
 h1 .b{color:var(--blue)}
 h1 .mark{background:linear-gradient(transparent 62%,var(--yellow) 62%,var(--yellow) 94%,transparent 94%)}
 
-.cols{display:grid;grid-template-columns:1.12fr 1fr;gap:9mm;margin-top:7mm;flex:1}
+.cols{display:grid;grid-template-columns:1.12fr 1fr;gap:9mm;margin-top:6mm;flex:1}
 .letter{font-family:var(--serif);font-size:10.2pt;line-height:1.95;color:#2c2925}
 .letter p+p{margin-top:3mm}
 .letter .hi{font-weight:700;color:var(--ink)}
@@ -70,6 +70,16 @@ h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inli
 .tl .key:after{content:"";display:block;height:2.2mm;margin-top:-2.4mm;background:var(--yellow);opacity:.8;position:relative;z-index:-1}
 .small{font-size:8pt;color:var(--soft);margin-top:2mm;line-height:1.5}
 
+
+.timebar{display:flex;align-items:center;gap:5mm;margin-top:5mm;background:var(--ink);color:var(--paper);padding:3mm 5mm;box-shadow:1.4mm 1.4mm 0 var(--red)}
+.timebar .d{font-family:var(--display);font-size:17pt;border-right:1pt solid rgba(242,236,224,.45);padding-right:5mm}
+.timebar .t{font-family:var(--display);font-size:30pt;color:var(--yellow);line-height:1}
+.timebar .h{margin-left:auto;font-family:var(--hand);font-size:20pt;transform:rotate(-4deg)}
+.opt{margin-top:3mm;border:1.2pt dashed var(--blue);padding:2.6mm 3.4mm;background:rgba(43,74,160,.06)}
+.opt .ok{font-size:8.6pt;font-weight:700;color:var(--blue);letter-spacing:.03em}
+.opt p{font-size:8.9pt;line-height:1.55;color:var(--soft);margin-top:1mm}
+.opt p b{color:var(--ink)}
+.info tr.em td b{background:linear-gradient(transparent 55%,var(--yellow) 55%)}
 .foot{margin-top:auto;padding-top:3mm;border-top:.6pt solid var(--line);display:flex;justify-content:space-between;font-size:7.6pt;color:var(--soft)}
 
 /* page 2 */
@@ -117,9 +127,13 @@ h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inli
     <div class="name">AI 부트캠프 <em>기초반</em> 안내</div>
     <div class="issue">2026. 11.<br>천안제일고 교사 연수</div>
   </div>
-  <div class="sub"><span>2차 AI 부트캠프 · 기초반 / 심화반 동시 운영</span><span>12.11(금) — 12.12(토) · 아산 지올리브펜션</span></div>
+  <div class="sub"><span>2차 AI 부트캠프 · 기초반 / 심화반</span><span>기초반 12.11(금) 13:30 — 15:30</span></div>
 
-  <h1>코딩 몰라도,<br><span class="b">1박 2일</span>이면 <span class="mark">내 앱 하나.</span></h1>
+  <h1>코딩 몰라도,<br><span class="b">딱 2시간</span>이면 <span class="mark">첫 앱 하나.</span></h1>
+
+  <div class="timebar">
+    <span class="d">12.11 금</span><span class="t">13:30 — 15:30</span><span class="h">오후 2시간이면 끝!</span>
+  </div>
 
   <div class="cols">
     <div>
@@ -127,10 +141,10 @@ h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inli
         <p>선생님, 안녕하세요.</p>
         <p>지난 10월, 열두 분의 선생님과 1박 2일 AI 부트캠프를 다녀왔습니다. 코딩을 처음 해 보는 분도 많았는데,
           둘째 날 아침에는 <span class="hi">여섯 팀이 각자 만든 도구를 들고 발표</span>를 했습니다.</p>
-        <p>이번 12월에는 1차에 함께한 선생님들이 심화반으로 한 걸음 더 나아가고,
-          처음 시작하시는 선생님들을 위해 <span class="hi">기초반</span>을 새로 엽니다.
-          기초반은 전담 강사님이 처음부터 끝까지 곁에서 도와주십니다.</p>
-        <p>‘나도 할 수 있을까’ 싶은 분께 꼭 맞는 자리입니다. 노트북 한 대만 들고 가볍게 오세요.</p>
+        <p>이번 12월에는 처음 시작하시는 선생님들을 위해 <span class="hi">기초반</span>을 엽니다.
+          <span class="hi">12월 11일 금요일 오후, 딱 두 시간</span>입니다. 전담 강사님과 함께 Claude로 나만의 첫 미니앱을 만들어 봅니다.</p>
+        <p>두 시간이 아쉬운 분은 같은 날 저녁부터 심화반과 함께 1박 2일을 이어 가실 수도 있습니다.
+          노트북 한 대만 들고 가볍게 오세요.</p>
       </div>
       <div class="sign">최훈석 드림<small>2차 AI 부트캠프 운영</small></div>
 
@@ -150,29 +164,26 @@ h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inli
           <li>AI로 뭔가 만든다는 얘기는 들었지만, 직접 해 본 적은 없다</li>
           <li>수업이나 업무에 쓰고 싶은 도구가 머릿속에 하나쯤 있다</li>
           <li>코딩은 나와 상관없는 일이라고 생각해 왔다</li>
-          <li>동료 선생님들과 하룻밤 푹 빠져 뭔가 만들어 보고 싶다</li>
+          <li>긴 연수는 부담스럽고, 짧게 맛만 보고 싶다</li>
         </ul>
         <div class="note">하나라도 해당되면, 기초반이 딱이에요!</div>
       </div>
 
       <div class="sec">
-        <h2>1박 2일, 이렇게 보냅니다</h2>
+        <h2>기초반 2시간, 이렇게 보냅니다</h2>
         <ul class="tl">
-          <li class="day">12.11 금요일</li>
-          <li><span class="t">16:00</span><span>펜션 도착, 짐 풀기</span></li>
-          <li><span class="t">16:30</span><span>저녁 식사</span></li>
-          <li><span class="t">17:30</span><span>오리엔테이션</span></li>
-          <li><span class="t">18:00</span><span class="key">바이브코딩 맛보기 — 첫 미니앱 만들기</span></li>
-          <li><span class="t">19:30</span><span class="key">만들 것 정하고 본격 개발</span></li>
-          <li><span class="t">21:00</span><span>야식</span></li>
-          <li><span class="t">~24:00</span><span>자유롭게 더 만들기</span></li>
-          <li class="day">12.12 토요일</li>
-          <li><span class="t">07:30</span><span>아침 식사</span></li>
-          <li><span class="t">08:30</span><span>마무리, 발표 준비</span></li>
-          <li><span class="t">09:00</span><span class="key">발표 — 내가 만든 도구 시연</span></li>
-          <li><span class="t">10:00</span><span>해산</span></li>
+          <li class="day">12.11 금요일 오후</li>
+          <li><span class="t">13:30</span><span>인사, Claude 로그인하고 시작하기</span></li>
+          <li><span class="t">13:50</span><span class="key">강사 시연 — 말로 앱 만드는 과정 보기</span></li>
+          <li><span class="t">14:10</span><span class="key">나만의 첫 미니앱 만들기</span></li>
+          <li><span class="t">15:10</span><span>옆자리 선생님과 서로 보여주기</span></li>
+          <li><span class="t">15:30</span><span>마무리</span></li>
         </ul>
-        <p class="small">세부 시간은 강사님과 조율하며 조금 바뀔 수 있습니다.</p>
+        <div class="opt">
+          <div class="ok">+ 희망자만 · 이어서 1박 2일</div>
+          <p><b>12.11(금) 16:00 ~ 12.12(토) 10:00</b><br>아산 영인면 지올리브펜션에서 심화반과 함께 더 만들고, 토요일 아침에 발표합니다. 숙박·식사 제공.</p>
+        </div>
+        <p class="small">세부 순서는 강사님과 조율하며 조금 바뀔 수 있습니다.</p>
       </div>
     </div>
   </div>
@@ -190,13 +201,13 @@ h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inli
   <div class="sec" style="margin-top:7mm">
     <h2>모집 개요</h2>
     <table class="info">
-      <tr><th>과정</th><td><b>2차 AI 부트캠프 기초반</b> <span>— 바이브코딩 입문부터 내 도구 완성까지</span></td></tr>
-      <tr><th>일정</th><td><b>2026. 12. 11.(금) 16:00 ~ 12. 12.(토) 10:00</b> <span>(1박 2일)</span></td></tr>
-      <tr><th>장소</th><td><b>지올리브펜션</b> <span>— 충남 아산시 영인면 · 강의와 발표는 세미나실</span></td></tr>
-      <tr><th>모집 인원</th><td><b>8~9명</b> <span>— 교과·경력 상관없이, 코딩 경험이 없어도 됩니다</span></td></tr>
-      <tr><th>강사</th><td><b>기초반 전담 강사</b> <span>— 처음부터 끝까지 함께합니다</span></td></tr>
-      <tr><th>제공</th><td><b>숙박, 저녁·야식·아침 식사, Claude 유료 계정</b> <span>— 참가비 부담 없이 오세요</span></td></tr>
-      <tr><th>결과물</th><td><b>내 수업·업무에 쓸 작은 웹 도구 1개</b> <span>— 주제는 직접 정합니다</span></td></tr>
+      <tr><th>과정</th><td><b>2차 AI 부트캠프 기초반</b> <span>— Claude로 나만의 첫 미니앱 만들기</span></td></tr>
+      <tr class="em"><th>일정</th><td><b>2026. 12. 11.(금) 13:30 ~ 15:30</b> <span>(2시간)</span></td></tr>
+      <tr><th>장소</th><td><b>추후 안내</b> <span>— 신청하신 분께 따로 알려 드립니다</span></td></tr>
+      <tr><th>모집 인원</th><td><b>15명</b> <span>— 교과·경력 상관없이, 코딩 경험이 없어도 됩니다</span></td></tr>
+      <tr><th>강사</th><td><b>기초반 전담 강사</b></td></tr>
+      <tr><th>지원</th><td><b>Claude 유료 계정</b> <span>— 참가비 부담 없이 오세요</span></td></tr>
+      <tr><th>이어서 (선택)</th><td><b>희망자는 심화반과 1박 2일</b> <span>— 12.11(금) 16:00 ~ 12.12(토) 10:00 · 아산 지올리브펜션 · 숙박·식사 제공</span></td></tr>
     </table>
   </div>
 
@@ -207,8 +218,7 @@ h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inli
         <li>개인 노트북 <span>필수 · 윈도·맥 모두 가능</span></li>
         <li>노트북 충전기 <span>필수</span></li>
         <li>만들고 싶은 것 한 줄 메모 <span>없어도 괜찮아요</span></li>
-        <li>세면도구, 상비약 <span>개인</span></li>
-        <li>편한 옷 · 잠옷 <span>개인</span></li>
+        <li>세면도구, 상비약, 편한 옷 <span>1박 희망자만</span></li>
       </ul>
       <p class="small">와이파이와 멀티탭은 현장에 준비해 둡니다.</p>
     </div>
@@ -218,10 +228,10 @@ h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inli
       <dl class="faq">
         <dt>코딩을 정말 하나도 몰라도 되나요?</dt>
         <dd>네. 코드는 AI가 씁니다. 선생님은 ‘무엇을 만들고 싶은지’를 말로 설명하시면 됩니다.</dd>
-        <dt>어떤 걸 만들게 되나요?</dt>
-        <dd>수업용 퀴즈나 타이머, 학급 업무 정리 도구처럼 작은 웹 도구 하나가 목표입니다.</dd>
-        <dt>심화반과는 무엇이 다른가요?</dt>
-        <dd>심화반은 1차 참여 선생님 대상의 응용 과정입니다. 기초반은 입문부터 시작하며, 같은 날 같은 장소에서 진행합니다.</dd>
+        <dt>두 시간 동안 뭘 만들 수 있나요?</dt>
+        <dd>수업용 퀴즈나 타이머처럼 작은 미니앱 하나가 목표입니다.</dd>
+        <dt>1박 2일도 꼭 가야 하나요?</dt>
+        <dd>아니요. 기초반은 15:30에 끝납니다. 더 해 보고 싶은 분만 신청서에서 1박 2일 참여를 선택하세요.</dd>
       </dl>
     </div>
   </div>
@@ -232,7 +242,7 @@ h2:before{content:"";width:3.2mm;height:3.2mm;background:var(--red);display:inli
       <h2>신청은 QR로</h2>
       <ol>
         <li>오른쪽 QR을 찍거나 아래 링크를 엽니다.</li>
-        <li>구글 설문에 이름과 교과를 적어 제출합니다.</li>
+        <li>이름과 교과, 1박 2일 참여 희망 여부를 적어 제출합니다.</li>
         <li>참가 확정은 개별로 안내해 드립니다.</li>
       </ol>
       <div class="meta">

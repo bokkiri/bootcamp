@@ -39,11 +39,11 @@ body{font-family:var(--sans);color:var(--ink);word-break:keep-all;-webkit-print-
   font-size:8.6pt;font-weight:600;letter-spacing:.02em;border-bottom:1.6pt solid var(--line);padding-bottom:2.2mm;position:relative}
 .top b{font-weight:700}
 
-.hero{position:relative;margin-top:8mm}
+.hero{position:relative;margin-top:6mm}
 .kicker{font-family:var(--hand);font-size:30pt;color:var(--red);transform:rotate(-4deg);
   display:inline-block;margin-left:2mm;line-height:1}
 .big{
-  font-family:var(--display);font-size:118pt;line-height:.92;letter-spacing:-.02em;color:var(--blue);
+  font-family:var(--display);font-size:104pt;line-height:.92;letter-spacing:-.02em;color:var(--blue);
   margin-top:1mm;position:relative;display:inline-block;white-space:nowrap;
 }
 .big .shadow{position:absolute;left:2.2mm;top:1.6mm;color:var(--red);mix-blend-mode:multiply;z-index:0}
@@ -53,36 +53,51 @@ body{font-family:var(--sans);color:var(--ink);word-break:keep-all;-webkit-print-
 }
 .side .tag{display:inline-block;border:1.4pt solid var(--ink);padding:1mm 2.6mm;font-size:9pt;margin-bottom:2mm}
 .sticker{
-  position:absolute;right:6mm;top:44mm;width:34mm;height:34mm;border-radius:50%;background:var(--yellow);
+  position:absolute;right:4mm;top:10mm;width:34mm;height:34mm;border-radius:50%;background:var(--yellow);
   display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(9deg);
   font-weight:700;font-size:9pt;line-height:1.25;text-align:center;box-shadow:1.2mm 1.2mm 0 var(--ink);
   border:1.4pt solid var(--ink)
 }
 .sticker b{font-family:var(--display);font-weight:400;font-size:22pt;line-height:1.05}
 
-.lead{font-size:20pt;font-weight:700;letter-spacing:-.03em;line-height:1.3;margin-top:6mm;max-width:150mm}
+.lead{font-size:16pt;font-weight:700;letter-spacing:-.03em;line-height:1.3;margin-top:5.5mm}
 .lead u{text-decoration:none;background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%)}
-.body{font-size:10.6pt;line-height:1.7;color:var(--soft);margin-top:3.5mm;max-width:128mm}
+.body{font-size:10.4pt;line-height:1.65;color:var(--soft);margin-top:2.5mm;max-width:150mm}
 
-.facts{display:grid;grid-template-columns:1.25fr 1fr;border:1.6pt solid var(--line);margin-top:7mm;background:var(--paper);position:relative}
+.facts{display:grid;grid-template-columns:1fr 1fr 1fr;border:1.6pt solid var(--line);margin-top:5mm;background:var(--paper);position:relative}
 .fact{padding:3.2mm 4mm;border-right:1pt solid var(--line);border-bottom:1pt solid var(--line)}
-.fact:nth-child(2n){border-right:none}
-.fact:nth-last-child(-n+2){border-bottom:none}
+.fact{border-bottom:none}
+.fact:last-child{border-right:none}
 .fact .k{font-size:7.8pt;font-weight:700;letter-spacing:.08em;color:var(--red)}
 .fact .v{font-size:13pt;font-weight:700;letter-spacing:-.02em;margin-top:.8mm;line-height:1.3}
 .fact .v small{display:block;font-size:8.6pt;font-weight:500;color:var(--soft);letter-spacing:0;margin-top:.4mm}
 .fact .v small .hl{font-weight:700;color:var(--ink);background:linear-gradient(transparent 55%,var(--yellow) 55%)}
 .arrow{font-family:var(--sans);font-weight:500;color:var(--soft);margin:0 1mm}
 
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:7mm}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:5mm}
 .step{border-top:1.6pt solid var(--line);padding-top:2.4mm}
 .step .n{font-family:var(--display);font-size:26pt;color:var(--red);line-height:1}
 .step .when{font-size:8pt;font-weight:700;letter-spacing:.04em;margin-top:1mm}
 .step h3{font-size:12pt;font-weight:700;letter-spacing:-.02em;margin-top:1mm}
 .step p{font-size:8.9pt;line-height:1.55;color:var(--soft);margin-top:1mm}
 
+
+.when{display:flex;align-items:center;gap:5mm;margin-top:5mm;background:var(--ink);color:var(--paper);
+  padding:3.6mm 5mm;position:relative;box-shadow:1.6mm 1.6mm 0 var(--red)}
+.when .date{font-family:var(--display);font-size:26pt;line-height:1;border-right:1pt solid rgba(242,236,224,.45);padding-right:5mm}
+.when .date small{display:block;font-family:var(--sans);font-size:9pt;font-weight:600;margin-top:1mm}
+.when .time{font-family:var(--display);font-size:46pt;line-height:1;letter-spacing:-.01em;color:var(--yellow);font-variant-numeric:tabular-nums}
+.when .dash{font-family:var(--sans);font-weight:500;margin:0 2mm;color:var(--paper)}
+.when .two{margin-left:auto;font-family:var(--hand);font-size:26pt;color:var(--paper);transform:rotate(-5deg);line-height:1}
+.step .when-s{font-size:8.6pt;font-weight:700;letter-spacing:.04em;margin-top:1mm;font-variant-numeric:tabular-nums}
+.more{display:flex;gap:4mm;align-items:center;margin-top:6mm;border:1.4pt dashed var(--blue);padding:3mm 4mm;background:rgba(43,74,160,.06)}
+.more .plus{font-family:var(--display);font-size:30pt;color:var(--blue);line-height:1}
+.more .mk{font-size:8pt;font-weight:700;letter-spacing:.06em;color:var(--blue)}
+.more .mt{font-size:13pt;font-weight:600;letter-spacing:-.02em;margin-top:.6mm}
+.more .mt b{font-weight:700;color:var(--blue)}
+.more .ms{font-size:8.6pt;color:var(--soft);margin-top:.8mm}
 .stub{
-  margin-top:auto;position:relative;border-top:1.4pt dashed var(--ink);padding-top:5mm;
+  margin-top:auto;margin-bottom:1mm;position:relative;border-top:1.4pt dashed var(--ink);padding-top:5mm;
   display:grid;grid-template-columns:1fr 38mm;gap:6mm;align-items:center
 }
 .stub .cut{position:absolute;top:-3.4mm;left:3mm;background:var(--paper);padding:0 1.5mm;font-size:10pt}
@@ -111,28 +126,40 @@ body{font-family:var(--sans);color:var(--ink);word-break:keep-all;-webkit-print-
   <section class="hero">
     <div class="kicker">코딩, 처음이세요?</div><br>
     <div class="big" aria-label="기초반"><span class="shadow" aria-hidden="true">기초반</span><span class="face">기초반</span></div>
-    <div class="side"><span class="tag">AI 부트캠프</span><br>1박 2일<br>12.11 — 12.12</div>
-    <div class="sticker"><span>모집</span><b>8~9명</b><span>교과 무관</span></div>
-
-    <p class="lead">하고 싶은 걸 말로 설명하면,<br><u>코드는 AI가 씁니다.</u></p>
-    <p class="body">버튼 하나 만들 줄 몰라도 괜찮습니다. 수업 시간에 쓰고 싶었던 퀴즈, 매번 손으로 하던 집계표처럼
-      ‘이런 거 하나 있으면 좋겠다’ 싶던 것을 1박 2일 동안 직접 만들어 봅니다. 기초반 전담 강사님이 처음부터 끝까지 옆에서 도와드립니다.</p>
+        <div class="sticker"><span>모집</span><b>15명</b><span>교과 무관</span></div>
   </section>
 
+  <div class="when">
+    <div class="date">12.11<small>금요일</small></div>
+    <div class="time">13:30<span class="dash">—</span>15:30</div>
+    <div class="two">딱 2시간!</div>
+  </div>
+
+  <p class="lead">하고 싶은 걸 말로 설명하면, <u>코드는 AI가 씁니다.</u></p>
+  <p class="body">버튼 하나 만들 줄 몰라도 괜찮습니다. 금요일 오후 두 시간, 수업에 쓰고 싶던 퀴즈나 타이머를 직접 만들어 봅니다. 기초반 전담 강사님이 옆에서 도와드립니다.</p>
+
   <div class="facts">
-    <div class="fact"><div class="k">언제</div><div class="v">12.11 금 16:00<span class="arrow">→</span>12.12 토 10:00<small>1박 2일</small></div></div>
-    <div class="fact"><div class="k">어디서</div><div class="v">지올리브펜션<small>아산시 영인면 · 세미나실</small></div></div>
-    <div class="fact"><div class="k">누가</div><div class="v">코딩 처음인 선생님<small>교과·경력 상관없이 누구나</small></div></div>
-    <div class="fact"><div class="k">준비물</div><div class="v">노트북 한 대<small>숙박·식사·야식, <b class="hl">Claude 유료 계정</b>까지 지원</small></div></div>
+    <div class="fact"><div class="k">어디서</div><div class="v">추후 안내<small>신청하신 분께 따로 알려 드립니다</small></div></div>
+    <div class="fact"><div class="k">누가</div><div class="v">코딩 처음인 선생님<small>교과·경력 상관없이 15명</small></div></div>
+    <div class="fact"><div class="k">준비물</div><div class="v">노트북 한 대<small><b class="hl">Claude 유료 계정</b> 지원</small></div></div>
   </div>
 
   <div class="steps">
-    <div class="step"><div class="n">1</div><div class="when">금요일 저녁</div><h3>말로 코딩해 보기</h3>
-      <p>AI에게 말로 시켜서 30분 만에 나만의 첫 미니앱을 만듭니다.</p></div>
-    <div class="step"><div class="n">2</div><div class="when">금요일 밤</div><h3>내 도구 만들기</h3>
-      <p>수업이나 업무에 쓸 도구를 정하고, 강사님과 함께 완성합니다.</p></div>
-    <div class="step"><div class="n">3</div><div class="when">토요일 아침</div><h3>보여주기</h3>
-      <p>만든 것을 동료 선생님들 앞에서 직접 시연합니다.</p></div>
+    <div class="step"><div class="n">1</div><div class="when-s">13:30</div><h3>Claude 시작하기</h3>
+      <p>계정에 로그인하고, AI에게 말로 일을 시키는 법을 익힙니다.</p></div>
+    <div class="step"><div class="n">2</div><div class="when-s">14:00</div><h3>첫 미니앱 만들기</h3>
+      <p>퀴즈, 타이머처럼 수업에 쓸 작은 앱을 말로 만들어 봅니다.</p></div>
+    <div class="step"><div class="n">3</div><div class="when-s">15:00</div><h3>보여주기</h3>
+      <p>만든 앱을 옆자리 선생님과 서로 시연하고 마무리합니다.</p></div>
+  </div>
+
+  <div class="more">
+    <div class="plus">+</div>
+    <div>
+      <div class="mk">더 해 보고 싶다면 · 희망자</div>
+      <div class="mt">같은 날 16:00부터 <b>심화반과 1박 2일</b></div>
+      <div class="ms">아산 영인면 지올리브펜션 · 12.12(토) 10:00 해산 · 숙박·식사 제공 · 신청서에서 함께 선택</div>
+    </div>
   </div>
 
   <div class="stub">
@@ -147,11 +174,6 @@ body{font-family:var(--sans);color:var(--ink);word-break:keep-all;-webkit-print-
       </div>
     </div>
     <div class="qr" data-apply-qr="#1F1D1A"></div>
-  </div>
-
-  <div class="foot">
-    <span>지난 10월 1차 부트캠프에는 선생님 12명이 참여해, 6개 팀이 1박 2일 동안 만든 도구를 직접 발표했습니다.</span>
-    <span>1차 참여 선생님은 같은 날 심화반으로 함께합니다.</span>
   </div>
 </div>
 <script src="vendor/qrcode.js"></script>
